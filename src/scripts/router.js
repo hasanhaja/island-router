@@ -14,8 +14,26 @@ async function navigate(pathname) {
     const bodyEndIndex = html.lastIndexOf("</body>");
     const bodyHTML = html.slice(bodyStartIndex, bodyEndIndex);
 
+    const currentTimer = document.querySelector("x-timer").cloneNode();
+    const temp = document.querySelector("#temp");
+    temp.appendChild(currentTimer);
+
+    // document.body.innerHTML = bodyHTML;
+
+    // const newTimer = document.querySelector("x-timer");
+    // const newParent = document.querySelector("main");
+    // newParent.replaceChild(currentTimer, newTimer);
+
+    // const currentTimerStartIndex = currentBody.indexOf("<x-timer>");
+    // const currentTimerEndIndex = currentBody.indexOf("</x-timer>") + "</x-timer>".length;
+
+    // console.log(currentBody.slice(0, currentTimerStartIndex));
+    // console.log(currentBody.slice(currentTimerEndIndex));
+    // 
+    // const targetTimerStartIndex = currentBody.indexOf("<x-timer>");
+    // const targetTimerEndIndex = currentBody.indexOf("</x-timer>") + "</x-timer>".length;
+
     // Replace the content on the page.
-    document.body.innerHTML = bodyHTML;
   }
 }
 
